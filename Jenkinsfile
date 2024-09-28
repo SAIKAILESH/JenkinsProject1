@@ -10,5 +10,12 @@ pipeline
                 git branch: 'main', url: 'https://github.com/SAIKAILESH/JenkinsProject1.git'
             }
         }
+        stage("contBuild")
+        {
+            steps
+            {
+                sh 'mvn package'
+            }
+        }
     }
 }
